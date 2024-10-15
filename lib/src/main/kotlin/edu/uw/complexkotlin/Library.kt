@@ -12,12 +12,16 @@ package edu.uw.complexkotlin
 val fizzbuzz: (IntRange) -> String = { range ->
     range.map { num ->
         when {
+            num % 105 == 0 -> "FIZZBUZZDOH"
+            num % 35 == 0 -> "BUZZDOH"
+            num % 21 == 0 -> "FIZZDOH"
             num % 15 == 0 -> "FIZZBUZZ"
-            num % 3 == 0 -> "FIZZ"
+            num % 7 == 0 -> "DOH"
             num % 5 == 0 -> "BUZZ"
+            num % 3 == 0 -> "FIZZ"
             else -> ""
         }
-    }.fold("") { acc, s -> acc + s }
+    }.joinToString("")
 }
 
 // Example usage
