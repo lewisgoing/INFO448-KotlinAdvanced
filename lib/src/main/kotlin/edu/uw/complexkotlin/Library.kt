@@ -45,7 +45,7 @@ fun process(message: String, block: (String) -> String): String {
 // Create r1 as a lambda that calls process() with message "FOO" and a block that returns "BAR"
 val r1 = { process("FOO") { "BAR" } }
 
-// Create r2 as a lambda that calls process() with message "FOO" and a block that upper-cases 
+// Create r2 as a lambda that calls process() with message "FOO" and a block that upper-cases
 // r2_message, and repeats it three times with no spaces: "WOOGAWOOGAWOOGA"
 val r2_message = "wooga"
 val r2 = { process("FOO") { r2_message.uppercase().repeat(3) } }
@@ -66,7 +66,7 @@ enum class Philosopher {
 }
 
 // create an class "Command" that can be used as a function.
-// To do this, provide an "invoke()" function that takes a 
+// To do this, provide an "invoke()" function that takes a
 // single parameter ("message" of type String). Command's
 // primary constructor should take a String argument ("prompt").
 // When invoked, the Command object should return a String
@@ -79,3 +79,7 @@ class Command(val prompt: String) {
         return prompt + message
     }
 }
+
+// Seneca Extra Credit
+// Seneca was a stoic philosopher and advisor to the roman emperor Nero.
+// He practiced Stoicism, which focuses on the belief that happiness comes from accepting the present moment, and not allowing oneself to be controlled by fear or pursuit of pleasure.

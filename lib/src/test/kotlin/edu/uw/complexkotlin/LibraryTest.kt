@@ -21,8 +21,25 @@ class LibraryTest {
     @Test fun fizzbuzzToFifteen() {
         assertEquals("FIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZ", fizzbuzz(1..15))
     }
+
     // Fizzbuzz to 25 should equal "FIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZ"
+    @Test fun fizzbuzzToTwentyFive() {
+        assertEquals("FIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZ", fizzbuzz(1..25))
+    }
+
     // Fizzbuzz to 50 should equal "FIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZ"
+    @Test fun fizzbuzzToFifty() {
+        assertEquals("FIZZBUZZFIZZFIZZBUZZFIZZFIZZDOHFIZZBUZZFIZZFIZZBUZZFIZZDOHFIZZFIZZBUZZ", fizzbuzz(1..50))
+    }
+
+
+    @Test fun fizzbuzzToHundred() {
+        assertEquals("FIZZBUZZFIZZFIZZBUZZFIZZFIZZDOHFIZZBUZZFIZZFIZZBUZZFIZZDOHFIZZFIZZBUZZDOHFIZZFIZZBUZZFIZZFIZZBUZZFIZZDOHFIZZFIZZBUZZFIZZFIZZBUZZFIZZDOHFIZZFIZZBUZZ", fizzbuzz(1..100))
+    }
+
+    @Test fun fizzbuzzDoh() {
+        assertEquals("FIZZBUZZDOHFIZZBUZZ", fizzbuzz(1..15))
+    }
 
     //@Test fun fizzbuzzgenToFifteen() {
     //    val fb = fizzbuzzgen(mapOf(3 to "FIZZ", 5 to "BUZZ"))
